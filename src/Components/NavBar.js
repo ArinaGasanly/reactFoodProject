@@ -26,12 +26,6 @@ const Logo = styled.div`
     align-items: center;
 `;
 
-const Sign = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
 const H1 = styled.h1`
 font-size: 24px;
 margin-left: 15px;
@@ -41,10 +35,12 @@ const ImgLogo = styled.img`
  width: 50px;
 `;
 
-const Button = styled.button`
- background-color: orange;
+const Login = styled.button`
+ background-color: transparent;
+ border-color: transparent;
  color: white;
- border-radius: 6px;
+ font-size: 16px;
+ cursor: pointer;
 `;
 
 const ImgSign = styled.img`
@@ -59,9 +55,9 @@ export const NavBar = () => (
     <ImgLogo src={logoImg} alt="logo"/>
     <H1>MrDonald's</H1>
     </Logo>
-     <Sign>
-    <ImgSign src={imgSign} alt="sign"/>
-    <Button>войти</Button>
-     </Sign>
+    <Login>
+      <ImgSign src={imgSign} alt="access"/>
+      <p>войти</p>
+      </Login>
   </NavBarStyled>
 );
