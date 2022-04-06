@@ -5,8 +5,8 @@ import { OrderListItem } from './OrderListItem';
 
 const OrderStyled = styled.section`
  position: fixed;
- flex-direction: column;
  display: flex;
+ flex-direction: column;
  top: 80px;
  left: 0;
  background: #fff;
@@ -27,16 +27,14 @@ flex-grow: 1;
 `;
 
 
-const OrderList = styled.ul`
-
-`;
+const OrderList = styled.ul``;
 
 
 const Total = styled.div`
 display: flex;
 margin: 0 35px 30px;
 & span:first-child {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 `;
 
@@ -46,16 +44,22 @@ min-width: 65px;
 margin-left: 20px;
 `;
 
-export const Order = () => {
+const EmptyList = styled.p`
+text-align: center;
+`;
+
+export const Order = ({ orders }) => {
   return (
     <OrderStyled>
     <OrderTitle>ВАШ ЗАКАЗ</OrderTitle>
     <OrderContent>
-      <OrderList>
-       <OrderListItem/>
-       <OrderListItem/>
-       <OrderListItem/>
-      </OrderList>
+      {orders.length ?
+       <OrderList>
+           <OrderListItem/>
+             {orders.map(order => <OrderListItem order={order}/>)}
+           <OrderListItem/>
+      </OrderList> :
+      <EmptyList>Список заказов пуст</EmptyList>}
     </OrderContent>
     <Total>
       <span>Итого</span>
