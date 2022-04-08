@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ButtonCheckout } from './ButtonCheckout';
-import { OrderListItem } from './OrderListItem';
+import { ButtonCheckout } from '../Style/ButtonCheckout';
+import { OrderListItem } from '../Order/OrderListItem';
 
 const OrderStyled = styled.section`
  position: fixed;
@@ -55,9 +55,7 @@ export const Order = ({ orders }) => {
     <OrderContent>
       {orders.length ?
        <OrderList>
-           <OrderListItem/>
              {orders.map(order => <OrderListItem order={order}/>)}
-           <OrderListItem/>
       </OrderList> :
       <EmptyList>Список заказов пуст</EmptyList>}
     </OrderContent>
