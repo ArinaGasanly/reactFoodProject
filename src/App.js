@@ -6,7 +6,7 @@ import { ModalItem } from './Components/Modal/ModalItem';
 import { Order } from './Components/Order/Order';
 import { useOpenItem } from './Components/Hooks/useOpenItem';
 import { useOrders} from './Components/Hooks/useOrders';
-
+import { CountItem } from './Components/Modal/CountItem';
 
 
 function App() {
