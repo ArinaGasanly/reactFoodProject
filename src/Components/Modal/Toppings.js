@@ -31,7 +31,7 @@ export function Toppings({ toppings, checkToppings }) {
         type="checkbox"/>
         {item.name}
       </ToppingLabel>
-      })}
+      ))}
 
       </ToppingWrap>
     </>
